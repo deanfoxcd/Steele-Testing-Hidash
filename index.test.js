@@ -10,7 +10,9 @@ const test = (desc, fn) => {
   }
 };
 
-test('The forEachFromScratch function', () => {
+// Changed to "it" for mocha. Previously "test"
+
+it('The forEachFromScratch function', () => {
   let sum = 0;
   index.forEachScratch([1, 2, 3], (value) => {
     sum += value;
@@ -24,7 +26,7 @@ test('The forEachFromScratch function', () => {
   assert.strictEqual(sum, 6, 'Should be 6');
 });
 
-test('The mapScratch function', () => {
+it('The mapScratch function', () => {
   const arr = [1, 2, 3];
   const result = index.mapScratch(arr, (value) => {
     return value * 2;
